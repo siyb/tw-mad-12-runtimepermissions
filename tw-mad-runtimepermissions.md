@@ -131,3 +131,11 @@
 * The user should be ***educated in context*** when non-Critical and non-obvious permissions have to be granted
 	* e.g. your photo App requires access to the user's location (EXIF)
 	* educate the user when the feature is accessed
+
+# Conclusion
+
+## Conclusion
+
+* Runtime permissions allow users to grant permissions on a more granular level
+* The new Runtime permissions system allows developers / distributers of Apps to explain why certain permissions are required, either in the context of the request, or beforehand
+* If you are planning to support Android 6.0, please make sure to implement runtime permissions correctly!
