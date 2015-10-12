@@ -70,13 +70,33 @@
 
 ## Permissions - Howto 4
 
-* In order to request a permission at runtime, it should have the "PROTECTION_DANGEROUS" protection level, since signature and normal permissions are granted at install time anyway
-* ```requestPermissions(...)``` may start an Activity in order to ask the user for certain permissions, meaning that your Activity or Fragment may be paused! Please refer to the Activity / Fragment lifecycle!
-* In addition, ```requestPermissions(...)``` might cause your App to restart, be prepared (Activity Stack will be reconstructed before the callback is received)
+* For our purposes, two permission levels are relevant
+	* normal:
+		* does not risk the user's privacy directly
+		* automatically granted
+	* dangerous:
+		* does risk the user's privacy by providing access to confidential data
+		* needs to be granted
 
 ## Permissions - Howto 5
 
+* In order to request a permission at runtime, it should have the "PROTECTION_DANGEROUS" protection level, since signature and normal permissions are granted at install time anyway
+* ```requestPermissions(...)``` may start an Activity in order to ask the user for certain permissions, meaning that your Activity or Fragment may be paused! Please refer to the Activity / Fragment lifecycle!
+
+## Permissions - Howto 6
+
+* In addition, ```requestPermissions(...)``` might cause your App to restart, be prepared (Activity Stack will be reconstructed before the callback is received)
+* The dialog that is shown by ```requestPermissions(...)``` will describe the permission group, _not_ individual permissions
+	* e.g. requesting COARSE and FINE location at once will promt the user for location access
+	* you still need to ask for all permissions of a group individually though! (no user interaction required!)
+
+## Permissions - Howto 7
+
 * Use ```shouldShowRequestPermissionRationale(Activity a, String permission)``` to check if you need to provide a rationale i.e. an explanation on why your App needs a certain permissions
+* This method will return ```true``` when a user has turned down a previous permission request or if the device policy does not allow granting the permission
+
+## Permissions - Howto 8
+
 * "For example, if you write a camera app, requesting the camera permission would be expected by the user and no rationale for why it is requested is needed. If however, the app needs location for tagging photos then a non-tech savvy user may wonder how location is related to taking photos. In this case you may choose to show UI with rationale of requesting this permission." - [Documentation](http://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#shouldShowRequestPermissionRationale(android.app.Activity, java.lang.String))
 
 # Example Code
