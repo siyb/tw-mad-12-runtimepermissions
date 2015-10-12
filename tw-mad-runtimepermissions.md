@@ -78,4 +78,6 @@
 
 # Example Code
 
+## TODO: explain when to ask for permissions
+
 
