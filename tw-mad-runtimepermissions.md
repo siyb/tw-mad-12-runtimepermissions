@@ -9,6 +9,8 @@
 * Runtime Permissions: [http://android-developers.blogspot.co.at/2015/08/building-better-apps-with-runtime.html](http://android-developers.blogspot.co.at/2015/08/building-better-apps-with-runtime.html)
 * Asking For Permissions: [https://www.youtube.com/watch?v=iZqDdvhTZj0](https://www.youtube.com/watch?v=iZqDdvhTZj0)
 * Patterns: [https://www.google.com/design/spec/patterns/permissions.html?utm_campaign=runtime-permissions-827&utm_source=dac&utm_medium=blog](https://www.google.com/design/spec/patterns/permissions.html?utm_campaign=runtime-permissions-827&utm_source=dac&utm_medium=blog)
+* ActivityCompat: [http://developer.android.com/reference/android/support/v4/app/ActivityCompat.html](http://developer.android.com/reference/android/support/v4/app/ActivityCompat.html)
+* ContextCompat: [http://developer.android.com/reference/android/support/v4/content/ContextCompat.html](http://developer.android.com/reference/android/support/v4/content/ContextCompat.html)
 
 ## Permissions - Introduction 1
 
