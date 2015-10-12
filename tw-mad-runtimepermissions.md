@@ -2,7 +2,7 @@
 % Patrick Sturm
 % 12.10.2015
 
-# Runtime Permissions
+# Resources
 
 ## Resources
 
@@ -11,6 +11,8 @@
 * Patterns: [https://www.google.com/design/spec/patterns/permissions.html?utm_campaign=runtime-permissions-827&utm_source=dac&utm_medium=blog](https://www.google.com/design/spec/patterns/permissions.html?utm_campaign=runtime-permissions-827&utm_source=dac&utm_medium=blog)
 * ActivityCompat: [http://developer.android.com/reference/android/support/v4/app/ActivityCompat.html](http://developer.android.com/reference/android/support/v4/app/ActivityCompat.html)
 * ContextCompat: [http://developer.android.com/reference/android/support/v4/content/ContextCompat.html](http://developer.android.com/reference/android/support/v4/content/ContextCompat.html)
+
+# Permissions / Runtime Permissions
 
 ## Permissions - Introduction 1
 
@@ -28,6 +30,7 @@
 * Enter Runtime Permissions!
 * User will not be asked to grant permissions during the installation or update process
 	* Permissions are requested on a "need to be granted"-basis
+	* The user will be promted to grant permissions, the "do not show again" checkbox will only be shown _after_ the user declined to grant the permission that was asked for ...
 
 ## Permissions - Howto 1
 
@@ -78,6 +81,33 @@
 
 # Example Code
 
-## TODO: explain when to ask for permissions
+# Asking For Permissions
 
+## Permissions - How To Ask For Permissions 1
+* Differentiation (permissions):
+	* Critical - This permission is required to provide the primary functionality of your App
+	* Non-Critical - This permission is required by a secondary functionality of your App
+	* Obvious - Most users would understand why granting the permission is required
+	* Non-Obvious - Users are not likely to understand why granting the permission is required
 
+## Permissions - How To Ask For Permissions 2
+
+![Source: https://www.google.com/design/spec/patterns/permissions.html](../patterns_permissions_patterns0.png)
+
+## Permissions - How To Ask For Permissions 3
+
+* Critical and obvious permissions should be ***asked up-front***
+	* e.g. your photo App requires the camera permission
+	* ask when your App is started
+* The user may be ***educated up-front*** when you are dealing with a Critical and non-obvious permission
+	* e.g. your game requires the contacts permission
+	* educate the user when the App is started, and tell her / him why you need the the permission
+
+## Permissions - How To Ask For Permissions 4
+
+* Non-Critical and obvious permissions should ***ask in context***
+	* e.g. your photo App requires access to the media gallery to load existing pictures
+	* ask when your App actually needs access to the feature
+* The user should be ***educated in context*** when non-Critical and non-obvious permissions have to be granted
+	* e.g. your photo App requires access to the user's location (EXIF)
+	* educate the user when the feature is accessed
