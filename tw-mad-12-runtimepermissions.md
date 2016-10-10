@@ -5,7 +5,7 @@
 ## Information
 
 * Any issues with this presentation? Write a ticket or send me a pull request ;).
-* Repo: [https://github.com/siyb/tw-mad-11-orm](https://github.com/siyb/tw-mad-11-orm)
+* Repo: [https://github.com/siyb/tw-mad-12-runtimepermissions](https://github.com/siyb/tw-mad-12-runtimepermissions)
 
 # Agenda
 
